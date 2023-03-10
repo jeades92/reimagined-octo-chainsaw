@@ -17,6 +17,7 @@ var symbols = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+","`","~","
 
 function generatePassword() {
   var passwordOptions = []
+  var finalPassword = []
   var length = prompt("how long would you like your password to be?")
   var hasUpperCase = confirm("would you like Upper case letters in your password?")
   var hasLowerCase = confirm("would you like to use lower case letters?")
@@ -39,6 +40,11 @@ function generatePassword() {
     passwordOptions = passwordOptions.concat(symbols)
   }
 console.log (passwordOptions)
+
+for (let index = 0; index < length; index++) {
+  finalPassword.push(passwordOptions[index]) 
+  console.log (finalPassword) 
+}
 }
 
 // Write password to the #password input
