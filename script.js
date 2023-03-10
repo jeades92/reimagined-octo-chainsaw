@@ -42,7 +42,7 @@ function generatePassword() {
 console.log (passwordOptions)
 
 for (let index = 0; index < length; index++) {
-  finalPassword.push(passwordOptions[index]) 
+  finalPassword.push(passwordOptions[Math.floor(Math.random()*passwordOptions.length)]) 
   console.log (finalPassword) 
 }
 }
